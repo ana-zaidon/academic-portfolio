@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact — Zaid Khalid Alfier</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <nav class="nav" role="navigation" aria-label="Main navigation">
+      <a href="index.html" class="nav-logo" aria-label="Home">ZA</a>
+      <ul class="nav-links" role="list">
+        <li><a href="index.html" class="nav-link">Home</a></li>
+        <li><a href="profile.html" class="nav-link">Profile</a></li>
+        <li><a href="contact.html" class="nav-link active" aria-current="page">Contact</a></li>
+      </ul>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" onclick="toggleMenu(this)">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+    <div class="mobile-menu" id="mobileMenu" role="navigation" aria-label="Mobile navigation">
+      <a href="index.html" class="mob-link">Home</a>
+      <a href="profile.html" class="mob-link">Profile</a>
+      <a href="contact.html" class="mob-link active">Contact</a>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- PAGE HERO -->
+    <section class="page-hero" aria-label="Page title">
+      <div class="container">
+        <div class="section-label" aria-hidden="true">Contact</div>
+        <h1 class="page-title">Get in<br/><em>Touch.</em></h1>
+      </div>
+    </section>
+
+    <!-- CONTACT LAYOUT -->
+    <section class="contact-section" aria-labelledby="contact-heading">
+      <div class="container">
+        <div class="contact-grid">
+
+          <!-- LEFT: INFO -->
+          <div class="contact-info" aria-labelledby="contact-heading">
+            <h2 id="contact-heading" class="contact-info-title">Let's connect.</h2>
+            <p class="contact-info-text">I'm always open to academic collaboration, feedback on my projects, or just a friendly conversation about technology and ideas. Don't hesitate to reach out.</p>
+
+            <ul class="contact-details" role="list">
+              <li class="contact-detail-item" role="listitem">
+                <div class="contact-icon" aria-hidden="true">✉</div>
+                <div>
+                  <p class="contact-detail-label">Email</p>
+                  <a href="mailto:4120485@yic.edu.sa" class="contact-detail-value">4120485@yic.edu.sa</a>
+                </div>
+              </li>
+              <li class="contact-detail-item" role="listitem">
+                <div class="contact-icon" aria-hidden="true">🎓</div>
+                <div>
+                  <p class="contact-detail-label">Institution</p>
+                  <p class="contact-detail-value">Yanbu Industrial College (YIC)</p>
+                </div>
+              </li>
+              <li class="contact-detail-item" role="listitem">
+                <div class="contact-icon" aria-hidden="true">🗺</div>
+                <div>
+                  <p class="contact-detail-label">Location</p>
+                  <p class="contact-detail-value">Yanbu, Saudi Arabia</p>
+                </div>
+              </li>
+              <li class="contact-detail-item" role="listitem">
+                <div class="contact-icon" aria-hidden="true">🆔</div>
+                <div>
+                  <p class="contact-detail-label">Student ID</p>
+                  <p class="contact-detail-value">4120485</p>
+                </div>
+              </li>
+            </ul>
+
+            <div class="contact-availability" role="status">
+              <span class="avail-dot" aria-hidden="true"></span>
+              <span>Available for academic collaboration</span>
+            </div>
+          </div>
+
+          <!-- RIGHT: CONTACT CARD -->
+          <div class="contact-card-wrap">
+            <div class="contact-card" aria-label="Contact information card">
+              <div class="card-photo-area">
+                <img src="photo_4120485.jpg" alt="Zaid Khalid Alfier" class="card-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                <div class="photo-fallback" aria-label="ZKA initials placeholder">ZKA</div>
+              </div>
+              <div class="card-body">
+                <h3 class="card-name">Zaid Khalid Alfier</h3>
+                <p class="card-role">CS Student · YIC</p>
+                <hr class="card-divider" aria-hidden="true" />
+                <p class="card-quote">"The only way to do great work is to love what you do."</p>
+                <p class="card-quote-attr">— Steve Jobs</p>
+                <a href="mailto:4120485@yic.edu.sa" class="btn-primary card-btn" aria-label="Send email to Zaid">Send Email</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- ADDITIONAL INFO -->
+        <div class="contact-bottom" aria-labelledby="response-heading">
+          <h2 id="response-heading" class="contact-bottom-title">A note on responses</h2>
+          <p>I aim to respond to all academic inquiries within 1–2 business days. For urgent matters related to coursework or group projects, feel free to mention the priority in your email subject line.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer" role="contentinfo">
+    <div class="container footer-inner">
+      <p class="footer-name">Zaid Khalid Alfier</p>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="index.html">Home</a>
+        <a href="profile.html">Profile</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+      <p class="footer-id">ID: 4120485 · CS Department · YIC</p>
+    </div>
+  </footer>
+
+  <script>
+    function toggleMenu(btn) {
+      const menu = document.getElementById('mobileMenu');
+      const expanded = btn.getAttribute('aria-expanded') === 'true';
+      btn.setAttribute('aria-expanded', !expanded);
+      menu.classList.toggle('open');
+    }
+  </script>
+</body>
+</html>
